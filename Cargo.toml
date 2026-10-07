@@ -1,0 +1,20 @@
+[package]
+name = "veil-clip"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "クリップボードの機密情報を監視するCLI / Clipboard secret observation CLI"
+readme = "README.md"
+repository = "https://github.com/mt4110/veil-clip"
+publish = false
+
+[dependencies]
+regex = { version = "1.13.1", default-features = false, features = ["std", "perf"] }
+
+[target.'cfg(target_os = "macos")'.dependencies]
+arboard = { version = "3.6.1", default-features = false }
+ctrlc = "3.5.2"
+rustix = { version = "1.1.5", default-features = false, features = ["std", "fs", "process"] }
+
+[lints.rust]
+unsafe_code = "forbid"

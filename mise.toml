@@ -1,0 +1,39 @@
+[tools]
+rust = "1.98.1"
+"cargo:cargo-audit" = "0.22.2"
+
+[tasks.toolchain]
+description = "開発ツールの版を表示 / Show development toolchain versions"
+run = ["rustc --version", "cargo --version"]
+
+[tasks."docs:check"]
+description = "日英文書の存在と空白を検査 / Check bilingual document presence and whitespace"
+run = "sh scripts/check-docs.sh"
+
+[tasks.check]
+description = "文書とRustの検査を実行 / Check documentation and Rust"
+run = ["mise run docs:check", "mise run fmt:check", "mise run clippy", "mise run test", "mise run build"]
+
+[tasks.fmt]
+description = "Rustコードを整形 / Format Rust code"
+run = "cargo fmt --all"
+
+[tasks."fmt:check"]
+description = "Rustの整形を検査 / Check Rust formatting"
+run = "cargo fmt --all -- --check"
+
+[tasks.clippy]
+description = "Rustの静的検査 / Run Rust lint checks"
+run = "cargo clippy --locked --all-targets -- -D warnings"
+
+[tasks.test]
+description = "コア・CLI・排他のテスト（クリップボードアクセスなし） / Test core, CLI and locking without clipboard access"
+run = "cargo test --locked --all-targets"
+
+[tasks.build]
+description = "ライブラリ・CLI・検証用例をビルド / Build library, CLI and validation examples"
+run = "cargo build --locked --all-targets"
+
+[tasks.audit]
+description = "RustSecの既知の脆弱性を照合（ネットワーク使用） / Check RustSec advisories (network access)"
+run = "cargo audit --deny warnings"
