@@ -26,6 +26,8 @@ jobs:
         with:
           version: 2026.1.4
           cache: false
+      - name: Rust検査コンポーネント導入 / Install Rust check components
+        run: mise exec -- rustup component add --toolchain "$RUSTUP_TOOLCHAIN" rustfmt clippy
       - name: コア・CLI検証 / Check core and CLI
         run: mise run check
       - name: 依存監査 / Audit dependencies

@@ -5,6 +5,9 @@ Japanese entries come first, followed by English.
 
 ## 未リリース / Unreleased
 
+- CIでrustfmtが未導入だった失敗を修正。mise導入後、検証前に固定ツールチェーンのrustfmt・clippyを明示的に導入する。
+  Fix CI failure caused by missing rustfmt; explicitly install rustfmt and clippy for the pinned toolchain after mise setup and before checks.
+
 - 機能開発を停止し、5作業日の利用場面確認と、完了・未検証・保留を区別するマイルストーン表を日英で追加。
   Pause feature development; add bilingual five-working-day validation and milestones distinguishing complete, unverified, and on-hold work.
 
