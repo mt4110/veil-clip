@@ -1,11 +1,13 @@
 # veil-clip
 
+**2026-10-07: Development and release preparation are frozen. The following preserves implementation/investigation records, not an active work plan.** [Reasons and reopening conditions](docs/ARCHIVE_DECISION.en.md)
+
 [日本語](README.md)
 
-A local CLI under development that detects potentially sensitive clipboard text and offers replacement after a short delay.
+A local macOS CLI that detects potentially sensitive clipboard text and reports it in the terminal.
 
 **The macOS observation-only CLI and detection/TTL core are implemented. Replacement and automatic startup are not implemented.**
-Feature development is paused while [five working days of use-case validation](docs/USE_CASE_VALIDATION.en.md) assess the need for further development. Recording templates are ready; observations have not been entered.
+The [release plan](docs/RELEASE_PLAN.en.md) and [observation template](docs/USE_CASE_VALIDATION.en.md) remain historical records. Following the password desk evaluation, no alternative use case justified further development, so the project was frozen. Five working days of observation were not completed.
 The core performs no OS operations. The CLI reads through `arboard` and reports detection and expiry. Synthetic-data validation on macOS confirmed reads, expiry notifications, cancellation, and Ctrl+C shutdown.
 
 ## Implemented core
@@ -79,7 +81,7 @@ Installing tools contacts their distribution services. `check` runs documentatio
 `audit` uses cargo-audit 0.22.2, pinned in mise, to check Cargo.lock against the public RustSec database. It needs network access; passing it does not guarantee safety.
 Keep Cargo.lock under version control and run Cargo through mise. No MSRV is declared.
 
-A [GitHub Actions workflow](.github/workflows/ci.yml) runs the same checks. Local results and remote CI results are separate; the remote workflow has not run yet.
+A [GitHub Actions workflow](.github/workflows/ci.yml) runs the same checks. Local results and remote CI results are separate; PR #1’s Ubuntu/macOS CI success and merge were verified on 2026-10-07.
 
 ## Documentation
 

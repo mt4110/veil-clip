@@ -1,5 +1,7 @@
 # Contributing
 
+**2026-10-07: Development and release preparation are frozen. The following preserves implementation/investigation records, not an active work plan.** [Reasons and reopening conditions](docs/ARCHIVE_DECISION.en.md)
+
 [日本語](CONTRIBUTING.md) · [README](README.en.md)
 
 ## Before contributing

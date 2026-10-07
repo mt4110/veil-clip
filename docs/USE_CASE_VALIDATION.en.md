@@ -1,8 +1,12 @@
 # Five working days of use-case validation
 
+**2026-10-07: Development and release preparation are frozen. The following preserves implementation/investigation records, not an active work plan.** [Reasons and reopening conditions](ARCHIVE_DECISION.en.md)
+
 [日本語](USE_CASE_VALIDATION.md)
 
 Prepared: 2026-10-07. Status: ready to record; observations have not been entered.
+
+Policy update, 2026-10-07: use this as M0 of the [release plan](RELEASE_PLAN.en.md). Development pause below means no feature expansion; use-case validation and bilingual release planning may proceed together. No feature development or publication before the value decision.
 
 ## Purpose and scope
 

@@ -6,7 +6,10 @@ set -eu
 for path in \
     README.md README.en.md \
     docs/DESIGN.md docs/DESIGN.en.md \
+    docs/ARCHIVE_DECISION.md docs/ARCHIVE_DECISION.en.md \
     docs/MILESTONES.md docs/MILESTONES.en.md \
+    docs/RELEASE_PLAN.md docs/RELEASE_PLAN.en.md \
+    docs/PASSWORD_USE_CASE.md docs/PASSWORD_USE_CASE.en.md \
     docs/USE_CASE_VALIDATION.md docs/USE_CASE_VALIDATION.en.md \
     SECURITY.md SECURITY.en.md \
     CONTRIBUTING.md CONTRIBUTING.en.md \

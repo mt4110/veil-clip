@@ -1,9 +1,21 @@
 # Milestones and tasks
 
+**2026-10-07: Development and release preparation are frozen. The following preserves implementation/investigation records, not an active work plan.** [Reasons and reopening conditions](ARCHIVE_DECISION.en.md)
+
 [日本語](MILESTONES.md)
 
-Reviewed: 2026-10-07. The current objective is to determine whether ordinary development work justifies further development. Feature development is paused.
-“Complete” applies only to the stated scope; it does not establish overall product safety or usefulness.
+Updated: 2026-10-07. The new M0–M2 below describe release-readiness phases. Earlier M1–M10 remain as implementation history; reused numbers do not establish new-phase completion.
+
+| Release-readiness phase | Status | Next task |
+| --- | --- | --- |
+| M0 Audience and value | Fails for the reported password workflow | [Desk evaluation](PASSWORD_USE_CASE.en.md): current detection/notification does not fit. Pause M1/M2; clarify remaining gap |
+| M1 Observation CLI quality | Partially complete | Prepare necessary bilingual/resume/non-text/resource device procedures |
+| M2 Initial-user delivery preparation | Not started | After M0/M1: installation/distribution route, private reporting, pre-release review |
+
+See the [release plan](RELEASE_PLAN.en.md) for completion, stop conditions and daily progress. Planning is complete; the M0 value decision is not.
+PR #1 merged on 2026-10-07; its Ubuntu/macOS CI success was verified. Local tests, limited device records and remote CI are distinct evidence.
+
+## Earlier implementation milestones (historical)
 
 | Milestone | Status | Evidence and remaining tasks |
 | --- | --- | --- |
@@ -16,14 +28,4 @@ Reviewed: 2026-10-07. The current objective is to determine whether ordinary dev
 | M7 Broader device, compatibility and performance checks | Unverified | Resume, real read failures, multiple formats, long runs, CPU/memory, other OSes. Decide checks for the particular situation that justifies development. |
 | M8 CLI lock integration and replacement | On hold | Not implemented. Locking cannot prevent another application's copy; separate reads/writes retain a race. ACLs, directory lifetime and a getconf timeout also require consideration before integration. |
 | M9 Autostart, GUI, auditing and paste monitoring | On hold | Not implemented. No automatic expansion or pivot. |
-| M10 Public release | On hold | The Draft PR is for review. Remote CI, a security reporting channel and necessary device validation require separate checks. Merge, tags and release require a separate decision. |
-
-## Next tasks
-
-1. The user records five actual working days in a private note without secret contents.
-2. Use a sanitized summary to determine whether existing measures resolve the issue and whether a concrete problem is unacceptable for personal use.
-3. End further development if no gap is established; otherwise discuss design and necessary tests for one situation only.
-
-Limited observation opportunities do not prove lack of need. Do not automatically extend the period or implementation scope.
-Automated tests do not access the clipboard, but lock tests use files and child processes. Lock fixtures remain under target.
-Read remote CI results in the PR Checks. Local success does not imply remote success.
+| M10 Public release | On hold | PR #1 is merged. At release, remote CI, a security reporting channel and necessary device validation require separate checks. Merge, tags and release require a separate decision. |

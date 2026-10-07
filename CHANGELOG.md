@@ -5,6 +5,12 @@ Japanese entries come first, followed by English.
 
 ## 未リリース / Unreleased
 
+- 2026-10-07：利用場面と現行方式の不一致、追加開発を正当化する別用途が得られなかったことから開発・公開準備を凍結。日英の判断記録と再開条件を追加し、未コミットの検討資料を保持。
+  Freeze development/release preparation on 2026-10-07 because the current approach did not fit the reported workflow and no alternative use case justified further work. Preserve investigation documents and add bilingual decision/reopening criteria.
+
+- 監視CLIの公開準備M0〜M2を定義し、旧実装マイルストーンを履歴として保持。通知の価値・品質・導入の完了条件と早期停止条件を日英で追加。PR #1のCI成功・マージを反映し、上書きを予定するように見える冒頭説明を修正。実装・実機操作・公開・定期実行は追加しない。
+  Define release-readiness M0–M2 for the observation CLI while preserving earlier implementation milestones. Add bilingual value, quality, delivery and early-stop criteria. Reflect PR #1 CI success/merge and remove introductory replacement expectations. No feature implementation, device operations, publication or scheduling added.
+
 - CIでrustfmtが未導入だった失敗を修正。mise導入後、検証前に固定ツールチェーンのrustfmt・clippyを明示的に導入する。
   Fix CI failure caused by missing rustfmt; explicitly install rustfmt and clippy for the pinned toolchain after mise setup and before checks.
 

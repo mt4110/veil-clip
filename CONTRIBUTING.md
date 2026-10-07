@@ -1,5 +1,7 @@
 # 貢献ガイド
 
+**2026-10-07：開発・公開準備を凍結しました。以下は保存した実装・検討の記録です。現在の実行予定ではありません。** [凍結理由と再開条件](docs/ARCHIVE_DECISION.md)
+
 [English](CONTRIBUTING.en.md) · [README](README.md)
 
 ## 最初に

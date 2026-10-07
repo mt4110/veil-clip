@@ -1,12 +1,14 @@
 # Security policy
 
+**2026-10-07: Development and release preparation are frozen. The following preserves implementation/investigation records, not an active work plan.** [Reasons and reopening conditions](docs/ARCHIVE_DECISION.en.md)
+
 [日本語](SECURITY.md) · [README](README.en.md)
 
 ## Support status
 
 The detection/TTL core and macOS observation-only CLI are implemented; there are no supported releases.
 The CLI only reads and reports events, never replaces content, and rejects `--apply` before initialization.
-The planned scope remains a helper for replacement of the current regular clipboard.
+This release plan covers detection and notification of text in the current regular clipboard. Notifications do not mean erasure or paste blocking.
 It does not guarantee erasure of history, synced data, copies already obtained by other applications, paste destinations, source files, swap, or core dumps.
 Read/write races, false negatives, false positives, OS suspension, and delays remain possible.
 
